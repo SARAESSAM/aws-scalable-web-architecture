@@ -2,10 +2,10 @@ Create VPC Network (subnets, routetables,NAT gateway. Internet Gateway)
 Create 3 Security Groups for ALB, EC2, RDS DB
 Create IAM role to enable SSM and cloudwatch access on EC2.
   Allows Ec2 instaances for:
-   Secure instance management
-   Session Manager access
-    No SSH required
-   Command execution
-    Send logs to CloudWatch
-    Publish application monitoring data
-     
+   Secure instance management, Session Manager access, No SSH required
+    Send logs to CloudWatch, Publish application monitoring data
+Create Launch template defined instance configuration required
+Create Target Group with enabling lisenter on HTTP (port 80)
+Create Application Load Balancer with assigned Target Group
+Create Auto scaling Group specify desired, min and max instances attach existing ALB
+
