@@ -2,24 +2,24 @@
 Scalable Web Application on AWS (EC2-Based)
 1. Project Overview
 
-This project designs a highly available, scalable, secure, and production-grade web application architecture on AWS using EC2 instances deployed in private subnets across multiple Availability Zones.
+   This project designs a highly available, scalable, secure, and production-grade web application architecture on AWS using EC2 instances deployed in private     subnets across multiple Availability Zones.
 
-The architecture uses:
-•	Application Load Balancer (ALB) for traffic distribution 
-•	Auto Scaling Group (ASG) for elasticity 
-•	CloudFront CDN for caching and latency reduction 
-•	RDS Multi-AZ for resilient database services 
-•	AWS WAF for application-layer protection 
-•	Systems Manager Session Manager for secure administration 
-•	CloudWatch + SNS for observability and alerting 
+    The architecture uses:
+     •	Application Load Balancer (ALB) for traffic distribution 
+     •	Auto Scaling Group (ASG) for elasticity 
+     •	CloudFront CDN for caching and latency reduction 
+     •	RDS Multi-AZ for resilient database services 
+     •	AWS WAF for application-layer protection 
+     •	Systems Manager Session Manager for secure administration 
+     •	CloudWatch + SNS for observability and alerting 
 
-The design follows AWS Well-Architected Framework principles:
+   The design follows AWS Well-Architected Framework principles:
 
- . Operational Excellence 
- . Security 
- . Reliability 
- . Performance Efficiency 
- . Cost Optimization 
+     . Operational Excellence 
+     . Security 
+     . Reliability 
+     . Performance Efficiency 
+     . Cost Optimization 
 
 
 2. Solution Objectives
@@ -52,5 +52,11 @@ The design follows AWS Well-Architected Framework principles:
       o	Systems Manager Session Manager
 
 4. AWS Architecture Diagram
- 
+   
+   - Users → Route 53 → CloudFront → AWS WAF → ALB → EC2 Auto Scaling (Multi-AZ Private Subnets) → Amazon RDS Multi-AZ
+   - Internet Access → Internet Gateway → NAT Gateways → Private Subnets
+   - Monitoring → CloudWatch → SNS Alerts
+   - Operations → Systems Manager → IAM Roles
+   - Security → Security Groups
+		
 <img width="1620" height="971" alt="Diagram (2)" src="https://github.com/user-attachments/assets/5e63e009-2721-4485-9a28-2bea77ae2ea1" />
