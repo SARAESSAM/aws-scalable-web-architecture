@@ -1,16 +1,35 @@
-# aws-scalable-web-architecture
-Scalable Web Application on AWS (EC2-Based)
+# Scalable and Secure AWS Web Architecture
+   .  Project Overview
+
+   .  Solution Objectives
+
+   .  High Level Architecture
+
+   .  AWS Architecture Diagram
+
 1. Project Overview
 
-   This project designs a highly available, scalable, secure, and production-grade web application architecture on AWS using EC2 instances deployed in private     subnets across multiple Availability Zones.
+     - Designed highly available AWS architecture across multiple AZs
+     - Implemented Auto Scaling for application resilience
+     - Protected application using AWS WAF
+     - Configured CloudWatch monitoring and logging
+     - Used IAM roles with SSM Session Manager access
+     - Designed secure network segmentation using public/private subnets
+
 
     The architecture uses:
-     •	Application Load Balancer (ALB) for traffic distribution 
-     •	Auto Scaling Group (ASG) for elasticity 
-     •	CloudFront CDN for caching and latency reduction 
-     •	RDS Multi-AZ for resilient database services 
-     •	AWS WAF for application-layer protection 
-     •	Systems Manager Session Manager for secure administration 
+     •	Application Load Balancer (ALB) for traffic distribution
+   
+     •	Auto Scaling Group (ASG) for elasticity
+   
+     •	CloudFront CDN for caching and latency reduction
+   
+     •	RDS Multi-AZ for resilient database services
+   
+     •	AWS WAF for application-layer protection
+   
+     •	Systems Manager Session Manager for secure administration
+   
      •	CloudWatch + SNS for observability and alerting 
 
    The design follows AWS Well-Architected Framework principles:
@@ -22,7 +41,7 @@ Scalable Web Application on AWS (EC2-Based)
      . Cost Optimization 
 
 
-2. Solution Objectives
+3. Solution Objectives
    
 
 	. High availability across multiple AZs 
@@ -33,7 +52,7 @@ Scalable Web Application on AWS (EC2-Based)
   . Monitoring and operational visibility 
   . Infrastructure ready for production workloads
      
-3. High-Level Architecture
+4. High-Level Architecture
    User Flow
     1.	Users access application through: 
         o	Route 53 DNS, CloudFront CDN 
@@ -51,7 +70,7 @@ Scalable Web Application on AWS (EC2-Based)
     7.	Administration handled securely through: 
       o	Systems Manager Session Manager
 
-4. AWS Architecture Diagram
+5. AWS Architecture Diagram
    
    - Users → Route 53 → CloudFront → AWS WAF → ALB → EC2 Auto Scaling (Multi-AZ Private Subnets) → Amazon RDS Multi-AZ
    - Internet Access → Internet Gateway → NAT Gateways → Private Subnets
