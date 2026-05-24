@@ -11,20 +11,17 @@
    . AWS Services Used
 
    .  Architecture flow
-
-   .  Solution Objectives
    
 1.  AWS Architecture Diagram
 
    <img width="1620" height="971" alt="Diagram (2)" src="https://github.com/user-attachments/assets/5e63e009-2721-4485-9a28-2bea77ae2ea1" />
-
-
 
 2. Project Overview
 
      This project demonstrates the design of a scalable and secure web application architecture on AWS.
 
       The architecture follows AWS best practices for:
+   
         - High Availability
         - Scalability
         - Security
@@ -35,7 +32,6 @@ The solution distributes traffic through an Application Load Balancer and automa
 
 3. AWS Services Used
    
-    The architecture uses:
      • VPC for Network Isolation
    
      • Public & Private Subnets for Secure workload segmentation
@@ -48,17 +44,17 @@ The solution distributes traffic through an Application Load Balancer and automa
     
      •	CloudFront CDN for caching and latency reduction
    
-     •	RDS Multi-AZ for resilient database services
+     •	RDS Multi-AZ for resilient database services.
    
-     •	AWS WAF for application-layer protection
+     •	AWS WAF for application-layer protection.
    
-     •	Systems Manager Session Manager for secure administration
+     •	Systems Manager Session Manager for secure administration.
    
-     •	CloudWatch + SNS for observability and alerting
+     •	CloudWatch + SNS for observability and alerting.
    
-     • Nat Gateway for outbound Internat access
+     • Nat Gateway for outbound Internat access for Web and DB servers.
    
-     • IAM for Access Managment
+     • IAM role for Access Managment instead of hardcoded credentials to allow EC2 access SSM and cloud watch.
    
    The design follows AWS Well-Architected Framework principles:
 
@@ -87,19 +83,10 @@ The solution distributes traffic through an Application Load Balancer and automa
       o	Systems Manager Session Manager
     8.  AWS WAF filters malicious requests
 
+Summary of Flow
+
    - Users → Route 53 → CloudFront → AWS WAF → ALB → EC2 Auto Scaling (Multi-AZ Private Subnets) → Amazon RDS Multi-AZ
    - Internet Access → Internet Gateway → NAT Gateways → Private Subnets
    - Monitoring → CloudWatch → SNS Alerts
    - Operations → Systems Manager → IAM Roles
   
-7. Solution Objectives
-
-  . High availability across multiple AZs 
-  . Horizontal scalability 
-  . Secure private infrastructure 
-  . Reduced latency using CDN caching 
-  . Automated recovery and failover 
-  . Monitoring and operational visibility 
-  . Infrastructure ready for production workloads
-   - Security → Security Groups
-		
