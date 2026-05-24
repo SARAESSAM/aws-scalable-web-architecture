@@ -1,1 +1,2 @@
+Create VPC Network (subnets, routetables,NAT gateway. Internet Gateway)
 Create 3 Security Groups for ALB, EC2, RDS DB
