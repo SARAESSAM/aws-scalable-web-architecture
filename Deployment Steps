@@ -6,6 +6,9 @@ Create IAM role to enable SSM and cloudwatch access on EC2.
     Send logs to CloudWatch, Publish application monitoring data
 Create Launch template defined instance configuration required
 Create Target Group with enabling lisenter on HTTP (port 80)
-Create Application Load Balancer with assigned Target Group
+Create Application Load Balancer with assigned Target Group 
 Create Auto scaling Group specify desired, min and max instances attach existing ALB
+Deploy RDS database
+Configure AWS WAF
+Configure monitoring using CloudWatch and SNS
 
