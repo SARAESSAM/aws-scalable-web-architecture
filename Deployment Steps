@@ -3,10 +3,11 @@
 1. Create VPC and networking components
 2. Configure public and private subnets
 3. Deploy NAT Gateway and route tables , Security Groups.
-4. Launch Application Load Balancer, Target Group.
-5. Configure Auto Scaling Group
-6. Deploy EC2 instances (Launch Template)
+5. Configure IAM for access SSM and cloudwatch on Ec2.
+4. Configure Launch Template for Ec2 instances. 
+5. Launch Target Group, Application Load Balancer.
+6. Configure Auto Scaling Group
 7. Configure Amazon RDS
 8. Configure AWS WAF
 9. Enable monitoring using CloudWatch & SNS
-10.configure Route 53
+10. Cnfigure Route 53
