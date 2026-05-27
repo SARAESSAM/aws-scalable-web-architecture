@@ -14,7 +14,9 @@
    
 1.  AWS Architecture Diagram
 
-   <img width="1620" height="971" alt="Diagram (2)" src="https://github.com/user-attachments/assets/5e63e009-2721-4485-9a28-2bea77ae2ea1" />
+   
+<img width="1661" height="911" alt="AWS 3 tier Scalable Web Architecture" src="https://github.com/user-attachments/assets/9eb77e06-5d5f-4c02-800c-75b5f68927ad" />
+
 
 2. Project Overview
 
@@ -55,7 +57,11 @@ The solution distributes traffic through an Application Load Balancer and automa
      • Nat Gateway for outbound Internat access for Web and DB servers.
    
      • IAM role for Access Managment instead of hardcoded credentials to allow EC2 access SSM and cloud watch.
-   
+
+     • Security Groups for controlling inbound and outbound traffic for AWS resources like ALB, EC2 instances, and RDS databases.
+
+     • Route53 for DNS resolution & Traffic Routing.
+      
    The design follows AWS Well-Architected Framework principles:
 
      . Operational Excellence 
