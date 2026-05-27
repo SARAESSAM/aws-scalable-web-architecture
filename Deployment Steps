@@ -8,6 +8,6 @@
 5. Launch Target Group, Application Load Balancer.
 6. Configure Auto Scaling Group
 7. Configure Amazon RDS
-8. Configure AWS WAF
-9. Enable monitoring using CloudWatch & SNS
-10. Cnfigure Route 53
+8. Configure Route 53 , Cloudfront distribution
+9. Configure AWS WAF
+10. Enable monitoring using CloudWatch & SNS
